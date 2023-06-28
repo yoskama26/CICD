@@ -1,15 +1,20 @@
 {
   "name": "cicd",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Exemple d'application avec pipeline CI/CD",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js",
+    "test": "mocha tests/**/*.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Votre Nom",
+  "license": "MIT",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "mocha": "^9.1.1",
+    "chai": "^4.3.4",
+    "supertest": "^6.1.6"
   }
 }
