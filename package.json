@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node app.js",
     "test": "mocha tests/**/*.js",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "build": "echo 'Build your application here'"
   },
   "author": "Votre Nom",
   "license": "MIT",
