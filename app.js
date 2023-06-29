@@ -1,11 +1,12 @@
-const express = require('express');
-const app = express();
-app.get('/', (req, res) => {
-    res.send('slt cv');
-  });
-  const port = 3000; // Port sur lequel le serveur écoutera les requêtes
+const http = require('http');
 
-  app.listen(port, () => {
-    console.log(`Le serveur est en écoute sur le port ${port}`);
-  });
-  
+const server = http.createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/plain');
+  res.end('Salut !');
+});
+
+const port = process.env.PORT || 3000;
+server.listen(port, () => {
+  console.log(`Le serveur est en cours d'exécution sur le port ${port}`);
+});
