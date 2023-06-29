@@ -30,9 +30,3 @@ jobs:
           app-name: WebAppCiCdRobinPEYRET
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
 
-      # - name: SonarCloud Analysis
-      #   env:
-      #     SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-      #   run: |
-      #     npm install -g sonarqube-scanner
-      #     sonar-scanner
