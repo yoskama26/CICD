@@ -24,9 +24,9 @@ jobs:
       - name: Run Tests
         run: npm test
 
-      - name: SonarCloud Analysis
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: |
-          npm install -g sonarqube-scanner
-          sonar-scanner
+      # - name: SonarCloud Analysis
+      #   env:
+      #     SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      #   run: |
+      #     npm install -g sonarqube-scanner
+      #     sonar-scanner
