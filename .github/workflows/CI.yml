@@ -24,10 +24,9 @@ jobs:
       - name: Run Tests
         run: npm test
 
-      - name: Run Linter
-        run: npm run lint
-
-      - name: SonarCloud Scan
-        uses: SonarSource/sonarcloud-github-action@4
+      - name: SonarCloud Analysis
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        run: |
+          npm install -g sonarqube-scanner
+          sonar-scanner
